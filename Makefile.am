@@ -115,9 +115,13 @@ dist_check_SCRIPTS = \
 	test/functional/pack/test.bats \
 	test/functional/full-run/test.bats \
 	test/functional/full-run-delta/test.bats \
-	test/functional/file-name-blacklisted/test.bats \
+	test/functional/file-name-blacklisted/test.bats
+
+if RENAMES
+dist_check_SCRIPTS += \
 	test/functional/renames/test.bats
 	test/functional/state-file/test.bats
+endif
 endif
 
 if COVERAGE
